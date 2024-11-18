@@ -1,0 +1,17 @@
+# Compiled Fortran files
+*.out
+fort.*
+
+# Executables
+heat
+heat2
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Data and output directories
+data/*
+!data/*.in
+# figs/*
+!figs/.gitkeep
