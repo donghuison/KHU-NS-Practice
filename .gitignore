@@ -13,5 +13,7 @@ __pycache__/
 # Data and output directories
 data/*
 !data/*.in
+# And keep the directory itself
+!data/.gitkeep
 # figs/*
 !figs/.gitkeep
