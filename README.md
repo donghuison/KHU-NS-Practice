@@ -20,7 +20,9 @@ Course: Numerical Simulation ([Prof. Tetsuya Magara](http://solardynamicslab.khu
 
 This project implements numerical solutions for the one-dimensional heat conduction equation as part of the Numerical Simulation course at the Department of Astronomy and Space Science, Kyung Hee University.
 
-## Problem Description
+## Mathematical Foundation
+
+### 1. Heat Conduction Equation
 
 The project solves the one-dimensional heat conduction equation:
 
@@ -37,9 +39,7 @@ where:
 |   $x$    | Position            |
 | $\alpha$ | Thermal diffusivity |
 
-## Implementation
-
-### Numerical Discretization
+### 2. Numerical Solution (FTCS Scheme)
 
 Using the FTCS (Forward Time Central Space) scheme:
 
@@ -53,18 +53,18 @@ Using the FTCS (Forward Time Central Space) scheme:
    $$T_j^{n+1} = T_j^n + s(T_{j+1}^n - 2T_j^n + T_{j-1}^n)$$
    where $s = \frac{\alpha \Delta t}{(\Delta x)^2}$ is the stability parameter
 
-### Stability Analysis
+#### Stability Analysis
 
 Von Neumann stability analysis shows that:
 - The scheme is conditionally stable
 - Stability condition: $s \leq 0.5$
 - Physical interpretation: The time step must be small enough relative to the spatial discretization
 
-### Analytical Solution
+### 3. Analytical Solution
 
 The analytical solution is derived using separation of variables and Fourier series expansion.
 
-#### Boundary Value Problem
+#### Initial and Boundary Conditions
 
 1. **Governing Equation:**
    $$\frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2}$$
@@ -108,7 +108,6 @@ The analytical solution is derived using separation of variables and Fourier ser
    \right.
 ```
    - Fourier coefficients: $a_n = \frac{8}{(2n-1)^2\pi^2}(-1)^{\frac{2n-1-1}{2}}$
-
 
 #### Numerical Implementation
 
