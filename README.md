@@ -24,11 +24,9 @@ This project implements numerical solutions for the one-dimensional heat conduct
 
 The project solves the one-dimensional heat conduction equation:
 
-<div align="center">
-
-$$ \frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2} $$
-
-</div>
+```math
+\displaystyle \frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2}
+```
 
 where:
 
@@ -81,7 +79,6 @@ The analytical solution is derived using separation of variables and Fourier ser
 
 3. **Boundary Conditions:** Fixed temperature at boundaries
    $$T(0,t) = T(1,t) = 0 \quad \text{for all } t \geq 0$$
-
 
 #### Solution Process
 
