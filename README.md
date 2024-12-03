@@ -72,12 +72,12 @@ The analytical solution is derived using separation of variables and Fourier ser
    $$\frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2}$$
 
 2. **Initial Condition:** Triangular temperature distribution
-   ```math
+```math
    T(x,0) = \begin{cases} 
    2x, & 0 \leq x < 0.5 \\
    2(1-x), & 0.5 \leq x \leq 1
    \end{cases}
-   ```
+```
 
 3. **Boundary Conditions:** Fixed temperature at boundaries
    ```math
