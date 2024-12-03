@@ -81,7 +81,7 @@ The analytical solution is derived using separation of variables and Fourier ser
 
 3. **Boundary Conditions:** Fixed temperature at boundaries
    ```math
-   \displaystyle T(0,t) = T(1,t) = 0 \quad \text{for all } t \geq 0
+   T(0,t) = T(1,t) = 0 \quad \text{for all } t \geq 0
    ```
 
 #### Solution Process
