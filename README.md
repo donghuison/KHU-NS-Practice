@@ -92,7 +92,8 @@ The analytical solution is derived using separation of variables and Fourier ser
    - Separating variables:
      $$\frac{G'(t)}{G(t)} = \alpha\frac{X''(x)}{X(x)} = -\alpha\lambda^2$$
    - This yields two ODEs:
-     $$X''(x) + \lambda^2X(x) = 0$$ \\
+     $$X''(x) + \lambda^2X(x) = 0,$$
+
      $$G'(t) + \alpha\lambda^2G(t) = 0$$
 
 2. **Step 2: Solving the ODEs**
