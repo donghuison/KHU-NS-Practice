@@ -100,12 +100,10 @@ The analytical solution is derived using separation of variables and Fourier ser
    - General solution: $T(x,t) = \sum_{n=1}^{\infty} a_n \sin(\lambda_n x)e^{-\alpha \lambda_n^2 t}$
    - Initial condition: 
 ```math
-   T(x,0) = \left\{
-   \begin{aligned}
-   2x     & \quad \text{for } 0 \leq x < 0.5 \\
-   2(1-x) & \quad \text{for } 0.5 \leq x \leq 1
-   \end{aligned}
-   \right.
+     T(x,0) = \begin{cases} 
+     2x, & 0 \leq x < 0.5 \\
+     2(1-x), & 0.5 \leq x \leq 1
+     \end{cases}
 ```
    - Fourier coefficients: $a_n = \frac{8}{(2n-1)^2\pi^2}(-1)^{\frac{2n-1-1}{2}}$
 
