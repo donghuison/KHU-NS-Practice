@@ -86,21 +86,31 @@ The analytical solution is derived using separation of variables and Fourier ser
 
 1. **Step 1: Separation of Variables**
 
-   - Assume solution of the form: $T(x,t) = X(x)G(t)$
+   - Assume solution of the form:
+     $$T(x,t) = X(x)G(t)$$
+
    - Substituting into heat equation:
      $$X(x)G'(t) = \alpha X''(x)G(t)$$
+
    - Separating variables:
      $$\frac{G'(t)}{G(t)} = \alpha\frac{X''(x)}{X(x)} = -\alpha\lambda^2$$
+
    - This yields two ODEs:
      $$X''(x) + \lambda^2X(x) = 0 \quad \text{and} \quad G'(t) + \alpha\lambda^2G(t) = 0$$
 
 2. **Step 2: Solving the ODEs**
 
-   - Spatial solution: $X(x) = \sin(\lambda_n x)$, where $\lambda_n = (2n-1)\pi$
-   - Temporal solution: $G(t) = e^{-\alpha \lambda_n^2 t}$
+   - Spatial solution:
+     $$X(x) = \sin(\lambda_n x), \quad \lambda_n = (2n-1)\pi$$
+
+   - Temporal solution:
+     $$G(t) = e^{-\alpha \lambda_n^2 t}$$
 
 3. **Step 3: Fourier Series Expansion**
-   - General solution: $T(x,t) = \sum_{n=1}^{\infty} a_n \sin(\lambda_n x)e^{-\alpha \lambda_n^2 t}$
+
+   - General solution:
+     $$T(x,t) = \sum_{n=1}^{\infty} a_n \sin(\lambda_n x)e^{-\alpha \lambda_n^2 t}$$
+
    - Initial condition:
 
 ```math
@@ -112,7 +122,8 @@ The analytical solution is derived using separation of variables and Fourier ser
    \right.
 ```
 
-- Fourier coefficients: $a_n = \frac{8}{(2n-1)^2\pi^2}(-1)^{\frac{2n-1-1}{2}}$
+- Fourier coefficients:
+  $$a_n = \frac{8}{(2n-1)^2\pi^2}(-1)^{\frac{2n-1-1}{2}}$$
 
 #### Numerical Implementation
 
