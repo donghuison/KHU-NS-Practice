@@ -56,6 +56,7 @@ Using the FTCS (Forward Time Central Space) scheme:
 #### Stability Analysis
 
 Von Neumann stability analysis shows that:
+
 - The scheme is conditionally stable
 - Stability condition: $s \leq 0.5$
 - Physical interpretation: The time step must be small enough relative to the spatial discretization
@@ -70,8 +71,9 @@ The analytical solution is derived using separation of variables and Fourier ser
    $$\frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2}$$
 
 2. **Initial Condition:** Triangular temperature distribution
+
 ```math
-   T(x,0) = \begin{cases} 
+   T(x,0) = \begin{cases}
    2x, & 0 \leq x < 0.5 \\
    2(1-x), & 0.5 \leq x \leq 1
    \end{cases}
@@ -83,22 +85,25 @@ The analytical solution is derived using separation of variables and Fourier ser
 #### Solution Process
 
 1. **Step 1: Separation of Variables**
+
    - Assume solution of the form: $T(x,t) = X(x)G(t)$
    - Substituting into heat equation:
      $$X(x)G'(t) = \alpha X''(x)G(t)$$
    - Separating variables:
      $$\frac{G'(t)}{G(t)} = \alpha\frac{X''(x)}{X(x)} = -\alpha\lambda^2$$
    - This yields two ODEs:
-     $$X''(x) + \lambda^2X(x) = 0$$
+     $$X''(x) + \lambda^2X(x) = 0$$ \\
      $$G'(t) + \alpha\lambda^2G(t) = 0$$
 
 2. **Step 2: Solving the ODEs**
+
    - Spatial solution: $X(x) = \sin(\lambda_n x)$, where $\lambda_n = (2n-1)\pi$
    - Temporal solution: $G(t) = e^{-\alpha \lambda_n^2 t}$
 
 3. **Step 3: Fourier Series Expansion**
    - General solution: $T(x,t) = \sum_{n=1}^{\infty} a_n \sin(\lambda_n x)e^{-\alpha \lambda_n^2 t}$
-   - Initial condition: 
+   - Initial condition:
+
 ```math
    T(x,0) = \left\{
    \begin{aligned}
@@ -107,7 +112,8 @@ The analytical solution is derived using separation of variables and Fourier ser
    \end{aligned}
    \right.
 ```
-   - Fourier coefficients: $a_n = \frac{8}{(2n-1)^2\pi^2}(-1)^{\frac{2n-1-1}{2}}$
+
+- Fourier coefficients: $a_n = \frac{8}{(2n-1)^2\pi^2}(-1)^{\frac{2n-1-1}{2}}$
 
 #### Numerical Implementation
 
@@ -125,6 +131,7 @@ end do
 #### Convergence Properties
 
 1. **Series Truncation:**
+
    - The infinite series is truncated at M_MAX = 100 terms
    - Higher modes (n > 100) contribute negligibly due to:
      - Rapid decay of coefficients ($\sim \frac{1}{n^2}$)
@@ -135,7 +142,6 @@ end do
    - Lower modes persist longer (smaller $\lambda_n^2$ in exponential)
    - Initial sharp features require more modes for accurate representation
    - Solution smooths over time as higher modes decay rapidly
-
 
 ### Code Structure
 
