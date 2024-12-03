@@ -46,13 +46,13 @@ where:
 Using the FTCS (Forward Time Central Space) scheme:
 
 1. Time derivative (Forward difference):
-   $$ \frac{\partial T}{\partial t} \approx \frac{T_j^{n+1} - T_j^n}{\Delta t} $$
+   $$\frac{\partial T}{\partial t} \approx \frac{T_j^{n+1} - T_j^n}{\Delta t}$$
 
 2. Space derivative (Central difference):
-   $$ \frac{\partial^2 T}{\partial x^2} \approx \frac{T_{j+1}^n - 2T_j^n + T_{j-1}^n}{(\Delta x)^2} $$
+   $$\frac{\partial^2 T}{\partial x^2} \approx \frac{T_{j+1}^n - 2T_j^n + T_{j-1}^n}{(\Delta x)^2}$$
 
 3. Resulting discrete equation:
-   $$ T_j^{n+1} = T_j^n + s(T_{j+1}^n - 2T_j^n + T_{j-1}^n) $$
+   $$T_j^{n+1} = T_j^n + s(T_{j+1}^n - 2T_j^n + T_{j-1}^n)$$
    where $s = \frac{\alpha \Delta t}{(\Delta x)^2}$ is the stability parameter
 
 ### Stability Analysis
@@ -69,28 +69,28 @@ The analytical solution is derived using separation of variables and Fourier ser
 #### Boundary Value Problem
 
 1. **Governing Equation:**
-   $$ \frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2} $$
+   $$\frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2}$$
 
 2. **Initial Condition:** Triangular temperature distribution
-   $$ T(x,0) = \begin{cases} 
+   $$T(x,0) = \begin{cases} 
    2x, & 0 \leq x < 0.5 \\
    2(1-x), & 0.5 \leq x \leq 1
-   \end{cases} $$
+   \end{cases}$$
 
 3. **Boundary Conditions:** Fixed temperature at boundaries
-   $$ T(0,t) = T(1,t) = 0 \quad \text{for all } t \geq 0 $$
+   $$T(0,t) = T(1,t) = 0 \quad \text{for all } t \geq 0$$
 
 #### Solution Process
 
 1. **Step 1: Separation of Variables**
    - Assume solution of the form: $T(x,t) = X(x)G(t)$
    - Substituting into heat equation:
-     $$ X(x)G'(t) = \alpha X''(x)G(t) $$
+     $$X(x)G'(t) = \alpha X''(x)G(t)$$
    - Separating variables:
-     $$ \frac{G'(t)}{G(t)} = \alpha\frac{X''(x)}{X(x)} = -\alpha\lambda^2 $$
+     $$\frac{G'(t)}{G(t)} = \alpha\frac{X''(x)}{X(x)} = -\alpha\lambda^2$$
    - This yields two ODEs:
-     $$ X''(x) + \lambda^2X(x) = 0 $$
-     $$ G'(t) + \alpha\lambda^2G(t) = 0 $$
+     $$X''(x) + \lambda^2X(x) = 0$$
+     $$G'(t) + \alpha\lambda^2G(t) = 0$$
 
 2. **Step 2: Solving the ODEs**
    - Spatial solution: $X(x) = \sin(\lambda_n x)$, where $\lambda_n = (2n-1)\pi$
