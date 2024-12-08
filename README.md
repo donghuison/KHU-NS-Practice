@@ -149,10 +149,11 @@ $$
       $$
       
       - Performing this integral with the given piecewise linear initial condition yields:
+
       $$
       a_m = \frac{8}{(2m-1)^2 \pi^2}(-1)^{m-1}.
       $$
-
+   
       The coefficients decrease as $1/(2m-1)^2$, ensuring rapid convergence, and the alternating sign $(-1)^{m-1}$ reflects the shape of the initial distribution.
 
       <!-- To find the coefficients $a_n$, we use the initial condition $T(x,0)$ and project it onto each eigenfunction $\sin(\lambda_n x)$:
