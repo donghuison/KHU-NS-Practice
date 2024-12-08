@@ -108,8 +108,13 @@ $$
 2. **Eigenfunctions and eigenvalues**
 
    With boundary conditions $X(0)=0$, $X(1)=0$, we have:
+
    $$X_n(x)=\sin(n\pi x), \quad \lambda_n = n\pi, \quad n=1,2,3,\ldots.$$
-   Due to the symmetry of the initial condition, only odd modes ($n=1,3,5,\ldots$) contribute. By letting $n=2m-1$, we focus on these odd modes:
+
+   Due to the symmetry of the initial condition, only odd modes ($n=1,3,5,\ldots$) contribute. 
+
+   By letting $n=2m-1$, we focus on these odd modes:
+
    $$\lambda_m = (2m-1)\pi, \quad X_m(x)=\sin((2m-1)\pi x).$$
 
    <!-- - Spatial solution:
