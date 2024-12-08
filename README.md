@@ -144,6 +144,7 @@ $$
    - Determining the coefficients $a_m$:
 
       - We project the initial condition onto the eigenfunctions:
+      
       $$a_m = 2 \int_0^1 T(x,0) \sin((2m-1)\pi x),dx.$$
       
       - Performing this integral with the given piecewise linear initial condition yields:
