@@ -78,7 +78,6 @@ $$
    2(1-x), & 0.5 \leq x \leq 1
    \end{cases}
 $$
-
    This creates a symmetric “tent” shape peaking at $x=0.5$ with $T=1$ at the peak and $T=0$ at the boundaries.
 
 3. **Boundary Conditions (Dirichlet):**
