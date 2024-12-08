@@ -79,7 +79,7 @@ $$
    \end{cases}
 $$
 
-This creates a symmetric “tent” shape peaking at $x=0.5$ with $T=1$ at the peak and $T=0$ at the boundaries.
+   This creates a symmetric “tent” shape peaking at $x=0.5$ with $T=1$ at the peak and $T=0$ at the boundaries.
 
 3. **Boundary Conditions (Dirichlet):**
 
