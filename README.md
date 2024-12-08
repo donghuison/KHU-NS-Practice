@@ -73,7 +73,7 @@ The analytical solution is derived using separation of variables and Fourier ser
 
 ```math
 T(x,0) = \begin{cases}
-2x, & 0 \leq x < 0.5 \\
+2x,     & 0 \leq x < 0.5 \\
 2(1-x), & 0.5 \leq x \leq 1
 \end{cases}
 ```
