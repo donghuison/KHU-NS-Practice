@@ -144,12 +144,12 @@ $$
    - Determining the coefficients $a_m$:
 
       - We project the initial condition onto the eigenfunctions:
-      
-      $$a_m = 2 \int_0^1 T(x,0) \sin((2m-1)\pi x),dx.$$
+
+         $$a_m = 2 \int_0^1 T(x,0) \sin((2m-1)\pi x),dx.$$
       
       - Performing this integral with the given piecewise linear initial condition yields:
 
-      $$a_m = \frac{8}{(2m-1)^2 \pi^2}(-1)^{m-1}.$$
+         $$a_m = \frac{8}{(2m-1)^2 \pi^2}(-1)^{m-1}.$$
    
       The coefficients decrease as $1/(2m-1)^2$, ensuring rapid convergence, and the alternating sign $(-1)^{m-1}$ reflects the shape of the initial distribution.
 
