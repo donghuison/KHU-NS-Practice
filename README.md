@@ -67,16 +67,18 @@ The analytical solution is derived using separation of variables and Fourier ser
 #### Initial and Boundary Conditions
 
 1. **Governing Equation:**
-   $$\frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2}$$
+   $$
+   \frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2}
+   $$
 
 2. **Initial Condition (Triangular profile):**
 
-$$
+   $$
    T(x,0) = \begin{cases}
    2x,     & 0 \leq x < 0.5 \\
    2(1-x), & 0.5 \leq x \leq 1
    \end{cases}
-$$
+   $$
 
 This creates a symmetric “tent” shape peaking at $x=0.5$ with $T=1$ at the peak and $T=0$ at the boundaries.
 
