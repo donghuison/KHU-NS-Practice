@@ -67,9 +67,8 @@ The analytical solution is derived using separation of variables and Fourier ser
 #### Initial and Boundary Conditions
 
 1. **Governing Equation:**
-$$
-   \frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2}
-$$
+
+$$\frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2}$$
 
 2. **Initial Condition (Triangular profile):**
 
