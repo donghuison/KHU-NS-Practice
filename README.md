@@ -128,6 +128,7 @@ $$
 
 3. **Temporal solution**
    For each mode:
+
    $$G_m(t) = e^{-\alpha (2m-1)^2 \pi^2 t}.$$
      <!-- The corresponding temporal equation $G'(t) + \alpha \lambda_m^2 G(t) = 0$ yields:
      $$G_m(t) = e^{-\alpha (2m-1)^2 \pi^2 t}$$ -->
